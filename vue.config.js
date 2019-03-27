@@ -1,4 +1,6 @@
 // vue.config.js 
 module.exports = {
-    publicPath: '<vue_todo_list>'
-}
+    publicPath: process.env.NODE_ENV === 'production'
+      ? '/vue_todo_list/'
+      : '/'
+  }
